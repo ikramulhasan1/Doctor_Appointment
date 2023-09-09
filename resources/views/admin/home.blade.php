@@ -38,7 +38,7 @@
             @include('admin.navbar')
 
             {{-- Body/Main Content --}}
-            {{-- @include('admin.body') --}}
+            @include('admin.body')
         </div>
     </div>
     <!-- container-scroller -->
