@@ -351,8 +351,7 @@
 
             </div>
     </footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus est ea illo fugiat laboriosam saepe esse
-        i</p>
+
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
