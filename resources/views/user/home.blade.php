@@ -20,6 +20,18 @@
     <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
     <link rel="stylesheet" href="../assets/css/theme.css">
+
+    <!-- Extra Css -->
+    <link rel="stylesheet" href="/assets/css/extra.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -27,16 +39,19 @@
     <!-- Back to top button -->
     <div class="back-to-top"></div>
 
-    <header>
+    <header class="sticky-top bg-black">
         <div class="topbar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 text-sm">
                         <div class="site-info">
-                            <a href="#"><span class="mai-call text-primary"></span> +00 123 4455
-                                6666</a>
+                            <a href="#" style="text-decoration: none;"><span class="text-primary mail"><i
+                                        class="fa-solid fa-phone"></i></span>
+                                +00
+                                123 4455 6666</a>
                             <span class="divider">|</span>
-                            <a href="#"><span class="mai-mail text-primary"></span>
+                            <a href="#" style="text-decoration: none;"><span class="text-primary"><i
+                                        class="fa-solid fa-envelope"></i></span>
                                 mail@example.com</a>
                         </div>
                     </div>
@@ -54,7 +69,8 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+                <a class="navbar-brand" href="#"><span class="text-white">One</span><span
+                        class="text-success">-Health</span></a>
 
                 <form action="#">
                     <div class="input-group input-navbar">
@@ -96,11 +112,11 @@
                                 </x-app-layout>
                             @else
                                 <li class="nav-item">
-                                    <a class="btn btn-primary ml-lg-3" href="{{ route('login') }}">Login</a>
+                                    <a class="btn btn-primary ml-lg-3 rounded-0" href="{{ route('login') }}">Login</a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a class="btn btn-primary ml-lg-3" href="{{ route('register') }}">Register</a>
+                                    <a class="btn btn-primary ml-lg-3 rounded-0"
+                                        href="{{ route('register') }}">Register</a>
                                 </li>
 
                             @endauth
@@ -154,18 +170,29 @@
             </div>
         </div> <!-- .page-section -->
 
+
+
         <div class="page-section pb-0">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 py-3 wow fadeInUp">
-                        <h1>Welcome to Your Health <br> Center</h1>
-                        <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                            dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo
-                            labore eaque porro consequatur ex aspernatur. Explicabo, excepturi
-                            accusantium! Placeat voluptates esse ut optio facilis!</p>
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
+                        <h1>Welcome to Our Health <br> Center</h1>
+                        <p class="text-grey mb-4">Welcome to Our Health Center! We are dedicated to
+                            providing
+                            high-quality healthcare services and promoting overall well-being for
+                            our community.
+                            Our mission is to ensure that you and your loved ones receive the best
+                            possible care
+                            in a welcoming and compassionate environment.
+
+                            Here at Our Health Center, we offer a wide range of medical services to
+                            meet your
+                            healthcare needs. Our team of experienced and dedicated healthcare
+                            professionals
+                            includes doctors, nurses, specialists, and support staff who are
+                            committed to
+                            delivering personalized and patient-centered care.</p>
+                        <a href="about.html" class="btn btn-primary">Read More</a>
                     </div>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
                         <div class="img-place custom-img-1">
@@ -177,33 +204,89 @@
         </div> <!-- .bg-light -->
     </div> <!-- .bg-light -->
 
-    @include('user.doctor');
-    <!-- .page-section -->
 
-    @include('user.latest');
-    <!-- .page-section -->
+    {{-- Doctor --}}
+    @include('user.doctor')
 
 
-    @include('user.appointment');
-    <!-- .page-section -->
+    <!-- new Departments -->
+    <div class="container ">
+        <div class="d-flex justify-content-between align-items-end mb-2">
 
-    <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
-        <div class="container py-5 py-lg-0">
-            <div class="row align-items-center">
-                <div class="col-lg-4 wow zoomIn">
-                    <div class="img-banner d-none d-lg-block">
-                        <img src="../assets/img/mobile_app.png" alt="">
+            <!-- home Title content -->
+            <div>
+                <h2>Departments</h2>
+                <!-- home Title content -->
+                <p>Select the Department you want and book it now in less than a minute.</p>
+            </div>
+
+            <!-- home Title content -->
+            <div>
+                <a href="http://themes.moses-clothing.com/Emantals/Departments" class="text-decoration-none">See all
+                    <i class="fa-solid fa-circle-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/departments/medicine.webp" class="card-img-top" alt="Medicine">
+                    <div class="card-body">
+                        <h5 class="card-title">General</h5>
+
                     </div>
                 </div>
-                <div class="col-lg-8 wow fadeInRight">
-                    <h1 class="font-weight-normal mb-3">Get easy access of all features using One
-                        Health Application</h1>
-                    <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
-                    <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/departments/cardiology.webp" class="card-img-top" alt="Medicine">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiology</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/departments/neurology.webp" class="card-img-top" alt="Medicine">
+                    <div class="card-body">
+                        <h5 class="card-title">Neurology</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/departments/dental.webp" class="card-img-top" alt="Medicine">
+                    <div class="card-body">
+                        <h5 class="card-title">Dental</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/departments/orthopaedics.webp" class="card-img-top" alt="Medicine">
+                    <div class="card-body">
+                        <h5 class="card-title">Orthopaedics</h5>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div> <!-- .banner-home -->
+
+    </div>
+
+
+    {{-- News --}}
+    @include('user.latest')
+
+    {{-- Appoinment --}}
+    @include('user.appointment')
+
 
     <footer class="page-footer">
         <div class="container">
@@ -253,8 +336,19 @@
 
             <hr>
 
-            <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>.
-                All right reserved</p>
+            <div class="d-flex justify-content-evenly ">
+                <span>
+                    <p id="copyright">Copyright &copy; 2023 <a class="text-decoration-none "
+                            href="https://www.linkedin.com/in/theikramulhasan/" target="_blank">Ikramul
+                            Hasan</a>. All right reserved</p>
+
+                </span>
+                <a href="">
+                    <i class="fa-solid fa-landmark fs-3 me-1"></i>
+                    <i class="fa-solid fa-money-check-dollar fs-3 me-1"></i>
+                    <i class="fa-brands fa-paypal fs-3 me-1"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -268,6 +362,9 @@
 
     <script src="../assets/js/theme.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
