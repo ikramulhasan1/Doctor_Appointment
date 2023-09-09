@@ -348,6 +348,8 @@
                     <i class="fa-solid fa-money-check-dollar fs-3 me-1"></i>
                     <i class="fa-brands fa-paypal fs-3 me-1"></i>
                 </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, quasi non sint ab quod doloribus
+                </p>
             </div>
         </div>
     </footer>
