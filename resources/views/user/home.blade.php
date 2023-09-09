@@ -351,6 +351,8 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, quasi non sint ab quod doloribus
                 </p>
             </div>
+            
+            <p>Ki bolte chao tomi</p>
         </div>
     </footer>
 
