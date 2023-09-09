@@ -349,6 +349,8 @@
                     <i class="fa-brands fa-paypal fs-3 me-1"></i>
                 </a>
             </div>
+            
+            <p>Ki bolte chao tomi</p>
         </div>
     </footer>
 
