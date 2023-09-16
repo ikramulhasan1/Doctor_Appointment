@@ -46,7 +46,7 @@
                     <div class="col-sm-8 text-sm">
                         <div class="site-info">
                             <a href="#" style="text-decoration: none;"><span class="text-primary mail"><i
-                                        class="fa-solid fa-phone"></i></span>
+                                        class="fa-solid fa-phone bg-black "></i></span>
                                 +00
                                 123 4455 6666</a>
                             <span class="divider">|</span>
@@ -90,7 +90,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupport">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
@@ -107,6 +107,12 @@
 
                         @if (Route::has('login'))
                             @auth
+                                <li class="nav-item">
+                                    <a class="nav-link" style="background-color:crimson; border: 0px; color: white"
+                                        href="{{ route('user.myappointment') }}">My
+                                        Appointment</a>
+                                </li>
+
                                 <x-app-layout>
 
                                 </x-app-layout>
@@ -126,6 +132,16 @@
             </div> <!-- .container -->
         </nav>
     </header>
+
+
+    {{--  --}}
+    @if (session()->has('msg'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+            {{ session()->get('msg') }}
+        </div>
+    @endif
+
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
         <div class="hero-section">
@@ -211,11 +227,11 @@
 
     <!-- new Departments -->
     <div class="container ">
-        <div class="d-flex justify-content-between align-items-end mb-2">
+        <div class="d-flex justify-content-between align-items-end mb-2 py-3">
 
             <!-- home Title content -->
             <div>
-                <h2>Departments</h2>
+                <h2 class="h2">Departments</h2>
                 <!-- home Title content -->
                 <p>Select the Department you want and book it now in less than a minute.</p>
             </div>
@@ -228,7 +244,7 @@
         </div>
 
         <!--  -->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
 
             <div class="col">
                 <div class="card">
