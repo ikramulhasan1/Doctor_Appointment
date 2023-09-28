@@ -52,7 +52,8 @@
                                     </td>
 
                                     <td>
-                                        <a href="" class="btn btn-success btn-sm">Update</a>
+                                        <a href="{{ route('admin.updatedoctor', $doctor->id) }}"
+                                            class="btn btn-success btn-sm">Update</a>
                                         <a href="{{ route('admin.deletedoctor', $doctor->id) }}"
                                             onclick="return confirm('Are you sure you want to delete this doctor details?')"
                                             class="btn btn-danger btn-sm">Delete</a>
